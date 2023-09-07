@@ -81,8 +81,8 @@
             <p>
                 <ul>
                     <il><a href="https://www.brunel.net/de-de/karriere-lexikon/it-systemadministrator#:~:text=IT%2DSystemadmins%20planen%2C%20installieren%2C,die%20mit%20IT%2DSystemen%20arbeiten.">Systemadmin</a></il>
-                    <il><a href=""></a></il>
-                    <il><a href=""></a></il>
+                    <il><a href="https://chat.openai.com/c/0cfb1bc5-a6f2-4f8a-819e-e0c49d58a623">System Admin (ChatGBT)</a></il>
+                    <il><a href="https://chat.openai.com/c/0cfb1bc5-a6f2-4f8a-819e-e0c49d58a623">Alen Turing (ChatGBT)</a></il>
                 </ul>
             </p>
         </section>
