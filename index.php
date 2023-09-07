@@ -8,12 +8,12 @@
     <link rel="shortcut icon" type="/image/png" href="images/favicon.ico">
     <title>WP Info 8D Portfolio</title>
     <link rel="stylesheet" href="https://www.bernhardbmx.net/styles/style.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="/scripts/drag_and_drop.js" defer>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://www.bernhardbmx.net/scripts/drag_and_drop.js" defer>
         dragAndDrop('cookie-popup-extra');
     </script>
-    <script src="https:///scripts/cookies.js"></script>
-    <script src="/scripts/script.js"></script>
+    <script src="https://www.bernhardbmx.net/scripts/cookies.js"></script>
+    <script src="https://www.bernhardbmx.net/scripts/script.js"></script>
 </head>
 
 <body>
@@ -56,32 +56,32 @@
     <header>
         <div id="header-menu-bar">
             <button type="menu" id="navigator_btn" class="btn" onclick="showNavigatorPopup()">Navigator</button>
-            <img src="/images/BB.png" alt="" id="mini-logo">
+            <img src="https://www.bernhardbmx.net/images/BB.png" alt="" id="mini-logo">
             
             <div id="user-menu">
                 <div id='user-manu-div'>
                     <a href='user-dashboard.php'>
-                        <img src='/images/account_circle_off-icon.svg' alt='' draggable='false'>
+                        <img src='https://www.bernhardbmx.net/images/account_circle_off-icon.svg' alt='' draggable='false'>
                     </a>
                     <div id='user-menu-a-div'>
                         <a href='' onclick='' style='color: gray;'>Anmelden</a>
                         <a href='' onclick='' style='color: gray; font-size: 7px;'>Registrieren</a>
                     </div>
                 </div> <a id="menu_a" onclick="showMiniPopup()">
-                    <img src='images/menu-icon.svg' alt='' draggable='false'>
+                    <img src='https://www.bernhardbmx.netimages/menu-icon.svg' alt='' draggable='false'>
                 </a>
             </div>
         </div>
         <!--
-        <img id="logo" src="/images/bernhardbmx_t.png" alt="BernhardBMX" width="100%" draggable="false">
+        <img id="logo" src="https://www.bernhardbmx.net/images/bernhardbmx_t.png" alt="BernhardBMX" width="100%" draggable="false">
             -->
     </header>
     <br><br><br><br>
     <main>
-        <section id="about-us">
+        <section id="system-administrator">
             <h2>System Administrator</h2>
             <p>
-                Leer Leer Leer
+                Muss erst googlen
             </p>
         </section>
         <br>
