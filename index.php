@@ -78,16 +78,19 @@
     </header>
     <br><br><br><br>
     <main>
-        <section id="system-administrator">
-            <h2>System Administrator</h2>
+        <section id="systemadmins">
+            <h2>Systemadmins</h2>
             <p>
-                IT-Systemadmins planen, installieren, konfigurieren und warten IT-Systeme und -Netzwerke in Unternehmen. Sie werden in allen Unternehmen und Organisationen gebraucht, die mit IT-Systemen arbeiten.
+                Systemadmins konfigurieren, installieren und warten Hardwere und Systeme.
+
+                Systemadmins planen, installieren, konfigurieren und warten IT-Systeme und -Netzwerke in Unternehmen. 
+                Sie werden in allen Unternehmen und Organisationen gebraucht, die mit IT-Systemen arbeiten.
             </p>
         </section>
         <br>
     </main>
     <footer>
-        <iframe src="/footer.html" id="footer" frameborder="0"></iframe>
+        <iframe src="https://www.bernhardbmx.net/footer.html" id="footer" frameborder="0"></iframe>
     </footer>
 </body>
 

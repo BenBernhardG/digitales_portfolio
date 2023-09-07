@@ -76,16 +76,20 @@
     </header>
     <br><br><br><br>
     <main>
-        <section id="system-administrator">
-            <h2>System Administrator</h2>
+        <section id="quellen">
+            <h2>Quellen</h2>
             <p>
-                IT-Systemadmins planen, installieren, konfigurieren und warten IT-Systeme und -Netzwerke in Unternehmen. Sie werden in allen Unternehmen und Organisationen gebraucht, die mit IT-Systemen arbeiten.
+                <ul>
+                    <il><a href="https://www.brunel.net/de-de/karriere-lexikon/it-systemadministrator#:~:text=IT%2DSystemadmins%20planen%2C%20installieren%2C,die%20mit%20IT%2DSystemen%20arbeiten.">Systemadmin</a></il>
+                    <il><a href=""></a></il>
+                    <il><a href=""></a></il>
+                </ul>
             </p>
         </section>
         <br>
     </main>
     <footer>
-        <iframe src="/footer.html" id="footer" frameborder="0"></iframe>
+        <iframe src="https://www.bernhardbmx.net/footer.html" id="footer" frameborder="0"></iframe>
     </footer>
 </body>
 </html>
