@@ -82,7 +82,8 @@
             <h2>Systemadmins</h2>
             <p>
                 Systemadmins konfigurieren, installieren und warten Hardwere und Systeme.
-
+                
+                <h5>Von der quelle kopiert:</h5>
                 Systemadmins planen, installieren, konfigurieren und warten IT-Systeme und -Netzwerke in Unternehmen. 
                 Sie werden in allen Unternehmen und Organisationen gebraucht, die mit IT-Systemen arbeiten.
             </p>
