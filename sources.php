@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="https://www.bernhardbmx.net/image/png" href="images/favicon.ico">
-    <title>WP Info 8D Portfolio</title>
+    <title>WP Info 8D Portfolio Quellen</title>
     <link rel="stylesheet" href="https://www.bernhardbmx.net/styles/style.css">
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://www.bernhardbmx.net/scripts/drag_and_drop.js" defer>
@@ -15,7 +14,6 @@
     <script src="https://www.bernhardbmx.net/scripts/cookies.js"></script>
     <script src="https://www.bernhardbmx.net/scripts/script.js"></script>
 </head>
-
 <body>
     <div id="body-overlay" class="visieble"></div>
     <div class="popup-container">
@@ -90,5 +88,4 @@
         <iframe src="/footer.html" id="footer" frameborder="0"></iframe>
     </footer>
 </body>
-
 </html>
