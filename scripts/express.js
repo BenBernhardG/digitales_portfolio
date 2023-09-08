@@ -1,23 +1,26 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-const port = 3000;
+const { exec } = require('child_process');
+const http = require('http');
 
-app.use(express.static(path.join(__dirname, 'public')));
+const phpFilePath = 'index.php';
 
-app.all('*.php', (req, res, next) => {
-    const phpFilePath = path.join(__dirname, 'public', req.url);
-    const { exec } = require('child_process');
-    exec(`php -f ${phpFilePath}`, (error, stdout, stderr) => {
-        if (error) {
-            console.error(`Fehler beim Ausführen der PHP-Datei: ${error}`);
-            res.status(500).send('Interner Serverfehler');
-            return;
-        }
-        res.status(200).send(stdout);
-    });
+const server = http.createServer((req, res) => {
+    if (req.url === '/') {
+        exec(`php -f ${phpFilePath}`, (error, stdout, stderr) => {
+            if (error) {
+                res.writeHead(500, { 'Content-Type': 'text/plain' });
+                res.end('Interner Serverfehler');
+                return;
+            }
+            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.end(stdout);
+        });
+    } else {
+        res.writeHead(404, { 'Content-Type': 'text/plain' });
+        res.end('Seite nicht gefunden');
+    }
 });
 
-app.listen(port, () => {
-    console.log(`Der Server läuft auf Port ${port}`);
+const port = 3000;
+server.listen(port, () => {
+    console.log(`Server läuft auf Port ${port}`);
 });
