@@ -1,14 +1,14 @@
 {
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "php": "^1.0.2"
   },
   "name": "info_portfolio",
   "description": "8D WP info Hefter",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node scripts/express.js"
   },
   "repository": {
     "type": "git",
