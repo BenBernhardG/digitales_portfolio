@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -158,36 +162,51 @@
             <h2>Systemadmins</h2>
             <p>
                 Systemadmins konfigurieren, installieren und warten Hardwere und Systeme.
-                
-                <h4>Von der quelle kopiert:</h4>
+                <br><br>
+                <h3>Von der quelle kopiert:</h3>
                 Systemadmins planen, installieren, konfigurieren und warten IT-Systeme und -Netzwerke in Unternehmen. 
                 Sie werden in allen Unternehmen und Organisationen gebraucht, die mit IT-Systemen arbeiten.
                 <br><br>
-                <h5>Beschreibung des Berufs und Tätigkeitsgebiete:</h5>
-                Ein Systemadministrator ist verantwortlich für die Planung, Implementierung, Wartung und Sicherung von Informationssystemen in Unternehmen oder Organisationen. Ihre Hauptaufgaben umfassen die Verwaltung von Servern, Netzwerken, Datenbanken und anderen IT-Infrastrukturen. Sie lösen technische Probleme, stellen sicher, dass Systeme reibungslos funktionieren, und schützen diese vor Sicherheitsrisiken. Systemadministratoren sind auch für die Unterstützung der Endbenutzer bei IT-Problemen verantwortlich.
-
-                <h4>Ausbildung oder (duales) Studium zur Erlangen der Qualifikation:<h4>
+                <h3>Beschreibung des Berufs und Tätigkeitsgebiete:</h3>
+                Ein Systemadministrator ist verantwortlich für die Planung, Implementierung, 
+                Wartung und Sicherung von Informationssystemen in Unternehmen oder Organisationen. 
+                Ihre Hauptaufgaben umfassen die Verwaltung von Servern, Netzwerken, Datenbanken und anderen IT-Infrastrukturen. Sie lösen technische Probleme, 
+                stellen sicher, dass Systeme reibungslos funktionieren, und schützen diese vor Sicherheitsrisiken. Systemadministratoren sind auch für die Unterstützung der Endbenutzer bei IT-Problemen verantwortlich.
+                <br><br>
+                <h3>Ausbildung oder (duales) Studium zur Erlangen der Qualifikation:</h3>
+                <br><br>
                 Die Qualifikation eines Systemadministrators kann auf verschiedene Weisen erreicht werden:
-
-                Ausbildung: Eine klassische Ausbildung zum Fachinformatiker für Systemintegration ist eine gebräuchliche Option. Diese Ausbildung dauert in der Regel drei Jahre und beinhaltet eine Kombination aus Berufsschulunterricht und praktischer Arbeit in einem Unternehmen.
-
-                Duales Studium: Ein duales Studium in Informatik oder einem verwandten Bereich, das parallel zur praktischen Arbeit in einem Unternehmen stattfindet, kann ebenfalls zur Qualifikation führen.
-
-                Studium: Ein direktes Studium in Informatik, Informationstechnologie oder einem verwandten Fach kann ebenfalls den Weg zum Systemadministrator ebnen.
-
-                <h4>Inhalte der Ausbildung bzw. des (dualen) Studiums:</h4>
+                <br><br>
+                Ausbildung: Eine klassische Ausbildung zum Fachinformatiker für Systemintegration ist eine gebräuchliche Option. 
+                Diese Ausbildung dauert in der Regel drei Jahre und beinhaltet eine Kombination aus Berufsschulunterricht und praktischer Arbeit in einem Unternehmen.
+                <br><br>
+                Duales Studium: Ein duales Studium in Informatik oder einem verwandten Bereich, 
+                das parallel zur praktischen Arbeit in einem Unternehmen stattfindet, kann ebenfalls zur Qualifikation führen.
+                <br><br>
+                Studium: Ein direktes Studium in Informatik, 
+                Informationstechnologie oder einem verwandten Fach kann ebenfalls den Weg zum Systemadministrator ebnen.
+                <br><br>
+                <h3>Inhalte der Ausbildung bzw. des (dualen) Studiums:</h3>
                 Die Ausbildung oder das Studium zum Systemadministrator kann folgende Inhalte umfassen:
-
+                <br><br>
                 Grundlagen der Informatik und Informationstechnologie
+                <br>
                 Betriebssysteme (z.B. Windows, Linux)
+                <br>
                 Netzwerktechnik und -administration
+                <br>
                 Datenbankmanagement
+                <br>
                 IT-Sicherheit und Datenschutz
+                <br>
                 Systemdesign und -implementierung
+                <br>
                 Problemlösung und Fehlerbehebung
+                <br>
                 Projektmanagement und Dokumentation
-                Voraussetzungen:
-                Die Voraussetzungen können je nach Ausbildung oder Studium variieren, aber typischerweise werden die folgenden Qualitäten und Fähigkeiten von Systemadministratoren erwartet:
+                <br><br>
+                <h3>Voraussetzungen:</h3>
+                Die Voraussetzungen können je nach Ausbildung oder Studium variieren, aber typischerweise werden die folgenden Qualitäten und Fähigkeiten von Systemadministratoren erwartet:<br>
 
                 Gutes technisches Verständnis und Interesse an Informationstechnologie.
                 Problemlösungsfähigkeiten und Geduld bei der Fehlerbehebung.
@@ -196,8 +215,8 @@
                 Bereitschaft zur Weiterbildung, da sich die IT-Landschaft ständig verändert.
                 Bezahlung während der Ausbildung:
                 Die Bezahlung während der Ausbildung kann je nach Land, Region und Unternehmen variieren. In der Regel erhalten Auszubildende eine angemessene Vergütung, die oft an Tarifverträgen oder gesetzlichen Mindestlöhnen ausgerichtet ist.
-
-                <h4>Bezahlung im Job:</h4>
+                <br><br>
+                <h3>Bezahlung im Job:</h3>
                 Die Bezahlung eines Systemadministrators im Job hängt von verschiedenen Faktoren ab, einschließlich Erfahrung, Qualifikationen, Unternehmensgröße und Standort. In der Regel verdienen erfahrene Systemadministratoren ein wettbewerbsfähiges Gehalt, das über dem Durchschnitt liegt, da IT-Fachleute sehr gefragt sind. Gehälter können stark variieren, aber sie können attraktiv sein, insbesondere in großen Unternehmen oder in spezialisierten IT-Bereichen wie Cybersecurity.
 
             </p>
@@ -207,13 +226,13 @@
             <h2>Alan Turing</h2>
             <p>
                 Kurze biografische Übersicht: Alan Turing war ein britischer Mathematiker, Logiker und Informatiker. Er wurde 1912 in London geboren. Während des Zweiten Weltkriegs spielte er eine entscheidende Rolle bei der Entschlüsselung der deutschen Enigma-Verschlüsselung, was zur Aufklärung von feindlichen Militärnachrichten beitrug. Turing war offen homosexuell, was in dieser Zeit kriminalisiert war. 1952 wurde er wegen "Unzucht" verurteilt, was schwerwiegende persönliche und berufliche Konsequenzen hatte. Er verstarb tragischerweise im Jahr 1954 durch Suizid.
-
+                <br><br>
                 Bedeutung für die Informatik: Turing wird oft als einer der Gründerväter der Informatik angesehen. Er entwickelte das Konzept der Turing-Maschine, eine abstrakte mathematische Vorstellung von einem Universalcomputer. Dieses Konzept legte die Grundlage für moderne Computer und deren Funktionsweise. Das von ihm entwickelte Turing-Test-Konzept hat auch die Künstliche Intelligenz und das Verständnis menschenähnlicher Maschinen beeinflusst. Alan Turing's Arbeit und sein Beitrag zur Entschlüsselung der Enigma-Maschine sind von enormer historischer Bedeutung für die Informatik.
-
+                <br><br>
                 Weibliche Person: Grace Hopper (1906-1992)
-
+                <br><br>
                 Kurze biografische Übersicht: Grace Hopper war eine US-amerikanische Informatikerin und Pionierin der Computerwissenschaft. Sie wurde 1906 in New York City geboren. Hopper hatte eine beeindruckende akademische Laufbahn und erhielt einen Doktortitel in Mathematik an der Yale University. Sie trat der US Navy bei und wurde während des Zweiten Weltkriegs zur Programmierung des Mark I-Computers abgestellt. Später arbeitete sie maßgeblich an der Entwicklung des COBOL-Programmierlanguages.
-
+                <br><br>
                 Bedeutung für die Informatik: Grace Hopper wird oft als "Queen of Code" bezeichnet und ist eine der wichtigsten Figuren in der Geschichte der Informatik. Sie war maßgeblich an der Entwicklung des ersten maschinenunabhängigen Programmierlanguages, COBOL, beteiligt. Dies trug zur Standardisierung von Programmiersprachen bei und ermöglichte es, Software auf verschiedenen Computern auszuführen. Ihr Erbe erstreckt sich auch auf die Idee von Fehlern oder "Bugs" in Software, da sie einmal einen echten Käfer (eine Motte) in einem Computer fand, der Probleme verursachte. Grace Hopper's Arbeit und Engagement in der Informatik haben dazu beigetragen, die moderne Softwareentwicklung zu gestalten und sind bis heute von großer Bedeutung.
             </p>
         </section>
@@ -222,9 +241,9 @@
             <h2>Quellen</h2>
             <p>
                 <ul>
-                    <il><a href="https://www.brunel.net/de-de/karriere-lexikon/it-systemadministrator#:~:text=IT%2DSystemadmins%20planen%2C%20installieren%2C,die%20mit%20IT%2DSystemen%20arbeiten.">Systemadmin</a></il>
-                    <il><a href="https://chat.openai.com/c/0cfb1bc5-a6f2-4f8a-819e-e0c49d58a623">System Admin (ChatGBT)</a></il>
-                    <il><a href="https://chat.openai.com/c/0cfb1bc5-a6f2-4f8a-819e-e0c49d58a623">Alen Turing (ChatGBT)</a></il>
+                    <li><a href="https://www.brunel.net/de-de/karriere-lexikon/it-systemadministrator#:~:text=IT%2DSystemadmins%20planen%2C%20installieren%2C,die%20mit%20IT%2DSystemen%20arbeiten.">Systemadmin</a></li>
+                    <li><a href="https://chat.openai.com/c/0cfb1bc5-a6f2-4f8a-819e-e0c49d58a623">System Admin (ChatGBT)</a></li>
+                    <li><a href="https://chat.openai.com/c/0cfb1bc5-a6f2-4f8a-819e-e0c49d58a623">Alen Turing (ChatGBT)</a></li>
                 </ul>
             </p>
         </section>
