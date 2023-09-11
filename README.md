@@ -1,4 +1,4 @@
-# info_portfolio
+# Info Portfolio
 8D WP info Hefter
 
 ## How to open the index.php
