@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="https://www.bernhardbmx.net/image/png" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="https://www.bernhardbmx.net/images/favicon.ico">
     <title>WP Info 8D Portfolio</title>
     <link rel="stylesheet" href="https://www.bernhardbmx.net/styles/style.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -14,6 +14,13 @@
     </script>
     <script src="https://www.bernhardbmx.net/scripts/cookies.js"></script>
     <script src="https://www.bernhardbmx.net/scripts/script.js"></script>
+
+    <!-- Diese beiden Referenzen behalten für MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <!-- Diese Referenz behalten für Radar Chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> 
 </head>
 
 <body>
@@ -78,6 +85,75 @@
     </header>
     <br><br><br><br>
     <main>
+        <section id="reflexion">
+            <h2>Reflexion</h2>
+            <p>
+                <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+                <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+                <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+                <!-- this canvas is later used to draw the chart, 
+                        if you want to draw several seperate charts you have to pay attention to the IDs -->
+                <!-- in diesem canvas wird das Digramm gezeichnet
+                        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->      
+                <canvas id="evaluation_01" style="border:1px solid"></canvas>
+                </div>
+        
+                <script>
+                var canvasId = "evaluation_01";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+                var chartTitle = "Kapitel 1";  // change accordingly
+                var dataSetValues = [15, 0, 11, 10, 11];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+        
+                    // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+                dataSetValues.forEach(function(item) {
+                    if (item < 0 || item > 15) {
+                        console.log(item);
+                        alert("Notenwert falsch: " + item + "!");
+                        dataSetValues = [0,0,0,0,0];
+                    };
+                    }
+                );
+        
+                var chartCanvas = document.getElementById(canvasId);  // don't change this
+                var chartData = {
+                    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+                    datasets: [
+                    {
+                    label: chartTitle,  // keep this
+                    backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+                    data: dataSetValues  // keep this
+                    }, 
+                    ]
+                };
+        
+                var radarChart = new Chart(chartCanvas, {
+                    type: 'radar',  // keep this
+                    data: chartData,
+                    options: {
+                        layout: {
+                        padding: 10
+                        },
+                        title: {
+                            display: true,
+                            text: 'Reflexion'  // change this title as you like it
+                        },
+                        scale: {
+                            angleLines: {
+                                display: true
+                            },
+                            ticks: {
+                                min: 0,
+                                max: 15,
+                                stepSize: 2,
+                            }
+                        },
+                        responsive: true,  // keep this
+                        maintainAspectRatio: false  // keep this
+                    }
+                });
+                </script>
+            </p>
+        </section>
+        <br>
         <section id="systemadmins">
             <h2>Systemadmins</h2>
             <p>
@@ -127,7 +203,7 @@
             </p>
         </section>
         <br>
-        <section>
+        <section id="AlenTuring">
             <h2>Alan Turing</h2>
             <p>
                 Kurze biografische Übersicht: Alan Turing war ein britischer Mathematiker, Logiker und Informatiker. Er wurde 1912 in London geboren. Während des Zweiten Weltkriegs spielte er eine entscheidende Rolle bei der Entschlüsselung der deutschen Enigma-Verschlüsselung, was zur Aufklärung von feindlichen Militärnachrichten beitrug. Turing war offen homosexuell, was in dieser Zeit kriminalisiert war. 1952 wurde er wegen "Unzucht" verurteilt, was schwerwiegende persönliche und berufliche Konsequenzen hatte. Er verstarb tragischerweise im Jahr 1954 durch Suizid.
@@ -139,6 +215,17 @@
                 Kurze biografische Übersicht: Grace Hopper war eine US-amerikanische Informatikerin und Pionierin der Computerwissenschaft. Sie wurde 1906 in New York City geboren. Hopper hatte eine beeindruckende akademische Laufbahn und erhielt einen Doktortitel in Mathematik an der Yale University. Sie trat der US Navy bei und wurde während des Zweiten Weltkriegs zur Programmierung des Mark I-Computers abgestellt. Später arbeitete sie maßgeblich an der Entwicklung des COBOL-Programmierlanguages.
 
                 Bedeutung für die Informatik: Grace Hopper wird oft als "Queen of Code" bezeichnet und ist eine der wichtigsten Figuren in der Geschichte der Informatik. Sie war maßgeblich an der Entwicklung des ersten maschinenunabhängigen Programmierlanguages, COBOL, beteiligt. Dies trug zur Standardisierung von Programmiersprachen bei und ermöglichte es, Software auf verschiedenen Computern auszuführen. Ihr Erbe erstreckt sich auch auf die Idee von Fehlern oder "Bugs" in Software, da sie einmal einen echten Käfer (eine Motte) in einem Computer fand, der Probleme verursachte. Grace Hopper's Arbeit und Engagement in der Informatik haben dazu beigetragen, die moderne Softwareentwicklung zu gestalten und sind bis heute von großer Bedeutung.
+            </p>
+        </section>
+        <br>
+        <section id="quellen">
+            <h2>Quellen</h2>
+            <p>
+                <ul>
+                    <il><a href="https://www.brunel.net/de-de/karriere-lexikon/it-systemadministrator#:~:text=IT%2DSystemadmins%20planen%2C%20installieren%2C,die%20mit%20IT%2DSystemen%20arbeiten.">Systemadmin</a></il>
+                    <il><a href="https://chat.openai.com/c/0cfb1bc5-a6f2-4f8a-819e-e0c49d58a623">System Admin (ChatGBT)</a></il>
+                    <il><a href="https://chat.openai.com/c/0cfb1bc5-a6f2-4f8a-819e-e0c49d58a623">Alen Turing (ChatGBT)</a></il>
+                </ul>
             </p>
         </section>
     </main>

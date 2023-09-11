@@ -1,3 +1,5 @@
+// BenBernhardG (Ben Giese) 2023
+
 const { exec } = require('child_process');
 const http = require('http');
 
@@ -20,7 +22,7 @@ const server = http.createServer((req, res) => {
     }
 });
 
-const port = 3000;
+const port = 12345;
 server.listen(port, () => {
     console.log(`Server läuft auf Port ${port}`);
 });
