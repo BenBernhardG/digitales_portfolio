@@ -12,8 +12,4 @@
 1. Open the codespace.
 2. Make a new terminal.
 3. Type npm run express.
-<<<<<<< HEAD
 5. Open [localhost:12345](http://localhost:12345) in your browser.
-=======
-5. Open [localhost:12345](http://localhost:12345) in your browser.
->>>>>>> 08736b6 (update README.md)
