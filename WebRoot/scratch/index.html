@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="https://www.bernhardbmx.net/images/favicon.ico">
+    <title>Portfolio - Scratch</title>
+    <link rel="stylesheet" href="https://www.bernhardbmx.net/styles/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.bernhardbmx.net/scripts/drag_and_drop.js" defer>
+        dragAndDrop('cookie-popup-extra');
+    </script>
+    <script src="https://www.bernhardbmx.net/scripts/cookies.js"></script>
+    <script src="https://www.bernhardbmx.net/scripts/script.js"></script>
+
+    <!-- Diese beiden Referenzen behalten für MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <!-- Diese Referenz behalten für Radar Chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+    <div id="body-overlay" class="visieble"></div>
+    <div class="popup-container">
+        <div id="cookie-popup" class="draggable visieble">
+            <!--  -->
+            <img src="/images/cookie.png" alt="Ein Cookie Bild" draggable="false" height="80px" width="80px">
+            <p>Willst du die leckeren cookies haben?</p>
+            <button type="submit" id="agreeBtn" class="btn">Haben!</button>
+            <button type="submit" id="disagreeBtn" class="btn" onclick="hideCookiePopup();">Mag ich nicht!</button>
+            <br><br>
+            <a href="/cookieinfo.php">Mehr Infos</a>
+        </div>
+        <div id="navigator-popup" class="draggable">
+            <div id="navigator_header" class="popup_header">
+                <img src="/images/bernhardbmx_t.png" alt="" draggable="false" width="150px">
+            </div>
+            <div id="navigator_main" class="popup_main">
+                <p>Navigator Menu</p>
+                <button type="button" class="large_btn"
+                    onclick="hideNavigatorPopup(); window.location.href='#'">Leer</button>
+                <br>&nbsp;<br>
+                <button type="submit" class="btn" onclick="hideNavigatorPopup()">Close</button>
+            </div>
+        </div>
+        <div id="mini-popup" class="draggable">
+            <div id="mini_header" class="popup_header">
+                <img src="/images/bernhardbmx_t.png" alt="" draggable="false" width="150px">
+            </div>
+            <div id="mini_main" class="popup_main">
+                <p>Mini Menu</p>
+                <button type="button" class="large_btn"
+                    onclick="hideNavigatorPopup(); window.location.href='#'">Leer</button>
+                &nbsp;<br>
+                <button type="submit" class="btn" onclick="hideMiniPopup()">Close</button>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div id="header-menu-bar">
+            <button type="menu" id="navigator_btn" class="btn" onclick="showNavigatorPopup()">Navigator</button>
+            <img src="https://www.bernhardbmx.net/images/BB.png" alt="" id="mini-logo">
+
+            <div id="user-menu">
+                <div id='user-manu-div'>
+                    <a href='user-dashboard.php'>
+                        <img src='https://www.bernhardbmx.net/images/account_circle_off-icon.svg' alt=''
+                            draggable='false'>
+                    </a>
+                    <div id='user-menu-a-div'>
+                        <a href='' onclick='' style='color: gray;'>Anmelden</a>
+                        <a href='' onclick='' style='color: gray; font-size: 7px;'>Registrieren</a>
+                    </div>
+                </div> <a id="menu_a" onclick="showMiniPopup()">
+                    <img src='https://www.bernhardbmx.netimages/menu-icon.svg' alt='' draggable='false'>
+                </a>
+            </div>
+        </div>
+        <!--
+        <img id="logo" src="https://www.bernhardbmx.net/images/bernhardbmx_t.png" alt="BernhardBMX" width="100%" draggable="false">
+            -->
+    </header>
+    <br><br><br><br>
+    <main>
+        <section id="reflexion">
+            <h2>Reflexion</h2>
+            <p>
+                <!-- for STYLE reasons the chart-CANVAS is embedded in a seperate DIV-container -->
+                <!-- wegen des STYLE ist die chart-CANVAS in einem seperaten DIV-container eingebettet -->
+            <div class="chart-container" style="position: relative; height: 40vh; width: 40vw">
+                <!-- this canvas is later used to draw the chart, 
+                        if you want to draw several seperate charts you have to pay attention to the IDs -->
+                <!-- in diesem canvas wird das Digramm gezeichnet
+                        wenn du mehrere Diagramme zeichnen willst, muss du die IDs anpassen-->
+                <canvas id="evaluation_01" style="border:1px solid"></canvas>
+            </div>
+
+            <script>
+                var canvasId = "evaluation_01";  // change accordingly, id has to fit ID of canvas you want to fill!!!!
+                var chartTitle = "Kapitel 1";  // change accordingly
+                var dataSetValues = [13, 0, 9, 9, 14];  // evaluate according to grade points  (0,1,2,3,4,5 ... 13,14,15)
+
+                // this checks whether values in dataSetValues are in the expected range, TODO: maybe later tell user which value is wrong
+                dataSetValues.forEach(function (item) {
+                    if (item < 0 || item > 15) {
+                        console.log(item);
+                        alert("Notenwert falsch: " + item + "!");
+                        dataSetValues = [0, 0, 0, 0, 0];
+                    };
+                }
+                );
+
+                var chartCanvas = document.getElementById(canvasId);  // don't change this
+                var chartData = {
+                    labels: ["Einzelarbeit", "Gruppenarbeit", "Effizienz", "Zeitplanung", "Verständnis"],  // don't change this
+                    datasets: [
+                        {
+                            label: chartTitle,  // keep this
+                            backgroundColor: "rgba(131, 15, 173,0.7)",  // change color and saturation/opacity here
+                            data: dataSetValues  // keep this
+                        },
+                    ]
+                };
+
+                var radarChart = new Chart(chartCanvas, {
+                    type: 'radar',  // keep this
+                    data: chartData,
+                    options: {
+                        layout: {
+                            padding: 10
+                        },
+                        title: {
+                            display: true,
+                            text: 'Reflexion'  // change this title as you like it
+                        },
+                        scale: {
+                            angleLines: {
+                                display: true
+                            },
+                            ticks: {
+                                min: 0,
+                                max: 15,
+                                stepSize: 2,
+                            }
+                        },
+                        responsive: true,  // keep this
+                        maintainAspectRatio: false  // keep this
+                    }
+                });
+            </script>
+            </p>
+        </section>
+        <br>
+        <section id="documentation">
+            <h2>Documentation</h2>
+            <p>
+                Ich habe zuerst die basics ins spielt hinzugefügt z.B. Initialisierung und spiel, start und alle objekte, das habe ich in den ersten blöcken gemacht aber in der letzten stunde vor der abgebe habe ich dem spiel den rest gegeben und die pysics hinzugefügt
+            </p>
+        </section>
+        <br>
+        <section id="quellen">
+            <h2>Quellen</h2>
+            <p>
+            <ul>
+                <li>
+                    <a href="">Robin Hummel</a>
+                </li>
+            </ul>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <iframe src="https://www.bernhardbmx.net/footer.html" id="footer" frameborder="0"></iframe>
+    </footer>
+</body>
+
+</html>
