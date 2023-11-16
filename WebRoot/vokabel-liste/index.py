@@ -1,0 +1,3 @@
+vokabekn = []
+
+antwort = input()
